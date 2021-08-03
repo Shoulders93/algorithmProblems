@@ -1,20 +1,56 @@
-// let word = "Hello";
-// console.log(word);
-
-// let word = "aaaaabbbbbbcccccccdddddd";
-// console.log(word);
+// Compress a string of characters
+// Need to break down the problem that I am trying to solve.
+// If multiple letters are in a row, then need to print how many of those letters
+// are there, then print that letter after the count of that letter
 
 function compressThisString(string){
-    let output = "";
-    let count = 0;
-    for(let i = 0; i < string.length; i++){
-        count++;
-        if(string[i] != string[i+1]){
-            output += string[i] + count;
-            count = 0;
+    let output = ""; // output has to be set to "" else it will print 'undefined' in console the first time
+    let counter = 0;
+    for(i = 0; i < string.length; i++){
+        counter++; // keeps counting up from 0;
+        if(string[i] != string[i + 1]){ // if letter in string is not equal to next letter,,
+            output += counter + string[i]; // then output will be equal to counter plus the letter in the string;
+            counter = 0; // counter has to be restated at 0 each time else it will keep counting all the total characters and not just the specific letter we are trying to count;
         }
     }
-    console.log(output);
-}
+    console.log(output); // since output was declared with nothing in it console will print how many characters are in a row until the 
+} // same letter doesnt match
 
-compressThisString("this is aaaaaa test for bbbbbb");
+compressThisString("aaaaabbbbbb");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function compressAString(string){
+//     output = "";
+//     counter = 0;
+//     for(i = 0; i < string.length; i++){
+//         counter++;
+//         if(string[i] != string[i+1]){
+//             output += counter + string[i];
+//             counter = 0;
+//         }
+//     }
+//     console.log(output);
+// }
+// compressAString("aaaaabbbbbbcccccc");

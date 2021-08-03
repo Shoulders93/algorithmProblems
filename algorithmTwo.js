@@ -9,8 +9,8 @@
 
 // now i need to target a specific letter in a string
 
-// let newWord ="hello world";
-// let firstLetter = newWord.charAt(0);
+// let word ="hello world";
+// let firstLetter = word.charAt(2);
 // console.log(firstLetter);
 
 // this specifically gets me the letter 'h', but not 'w' in world
@@ -21,12 +21,13 @@
 // let capitalizeWord= word.charAt(0).toUpperCase();
 // console.log(capitalizeWord);
 
-// This gives me 'H' in hello world, but I still need the rest of the string, not a specific letter
+// This gives me 'H' in hello world 
+// I still need the rest of the string, not a specific letter
 
 // If I am able to get 'H' how to I get the rest of the word 'ello'
 
 // let word = "hello";
-// let newWord = word.slice(1);
+// let newWord = word.slice(3);
 // console.log(newWord);
 
 // this gets me 'ello'
@@ -52,6 +53,5 @@ function capitalizeYourStringSentence(string){
     }
     let finalWord = newWord.join(" ");
     console.log(finalWord);
-        
 }
-capitalizeYourStringSentence("hello world!");
+capitalizeYourStringSentence("hello world");

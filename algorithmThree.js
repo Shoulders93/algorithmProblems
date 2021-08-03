@@ -19,38 +19,17 @@ function compressThisString(string){
 compressThisString("aaaaabbbbbb");
 
 
+function compressAnotherString(string){
+    let output = "";
+    let counter = 0;
+    for(i = 0; i < string.length; i++){
+        counter++;
+        if(string[i] != string[i+1]){
+            output += counter + string[i];
+            counter = 0;
+        }
+    }
+    console.log(output);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function compressAString(string){
-//     output = "";
-//     counter = 0;
-//     for(i = 0; i < string.length; i++){
-//         counter++;
-//         if(string[i] != string[i+1]){
-//             output += counter + string[i];
-//             counter = 0;
-//         }
-//     }
-//     console.log(output);
-// }
-// compressAString("aaaaabbbbbbcccccc");
+compressAnotherString("aaaaabbbbbccccc");
